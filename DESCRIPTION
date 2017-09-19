@@ -1,0 +1,23 @@
+Package: stockprices
+Type: Package
+Title: Download components of FTSE 100 and ticker prices
+Version: 0.0.1
+Authors@R: person("Andrie", "de Vries", role=c("aut", "cre"),
+    email="apdevries@gmail.com")
+Description: Download components of FTSE 100 and ticker prices.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Date: 2017-09-19
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1
+Imports:
+    magrittr,
+    quantmod,
+    lubridate,
+    dplyr,
+    rvest,
+    odbc,
+    tibble,
+    xml2,
+    DBI
