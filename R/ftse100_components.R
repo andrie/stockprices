@@ -49,4 +49,3 @@ update_ftse_components <- function(con, tickers){
 get_ftse100_components <- function(con){
   dbReadTable(con, "ftse") %>% as_tibble()
 }
-
