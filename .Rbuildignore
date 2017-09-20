@@ -2,3 +2,5 @@
 README.md
 TODO
 .travis.yml
+^.*\.Rproj$
+^\.Rproj\.user$

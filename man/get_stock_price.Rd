@@ -2,7 +2,7 @@
 % Please edit documentation in R/stock_price.R
 \name{get_stock_price}
 \alias{get_stock_price}
-\title{Read stock prices from Azure SQL.}
+\title{Read single stock ticker prices from Azure SQL.}
 \usage{
 get_stock_price(con, ticker)
 }
@@ -15,5 +15,5 @@ get_stock_price(con, ticker)
 tibble with ticker price data
 }
 \description{
-Read stock prices from Azure SQL.
+Read single stock ticker prices from Azure SQL.
 }

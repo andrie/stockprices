@@ -2,6 +2,7 @@
 
 export(compute_beta)
 export(connect_to_azure_sql)
+export(get_all_stock_prices)
 export(get_ftse100_components)
 export(get_stock_price)
 export(scrape_ftse100_components)

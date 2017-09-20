@@ -82,7 +82,7 @@ update_stock_price <- function(con, ticker, wait = 0.1){
   z
 }
 
-#' Read stock prices from Azure SQL.
+#' Read single stock ticker prices from Azure SQL.
 #' 
 #' @inherit update_ftse_components
 #' @inherit scrape_stock_price
@@ -97,3 +97,10 @@ get_stock_price <- function(con, ticker){
   z
 }
 
+#' Read all stock prices from Azure SQL in a single database read.
+#' 
+#' @inherit update_ftse_components
+#' @export
+get_all_stock_prices <- function(con){
+  dbReadTable(con, "prices") %>% as.tibble()
+}
