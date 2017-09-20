@@ -12,7 +12,7 @@
 #' 
 #' @importFrom stats complete.cases cov filter var
 #' @importFrom utils tail
-connect_to_azure_sql <- function(db, port = 1433, id, pw){
+connect_to_azure_sql <- function(db, id, pw, port = 1433){
   con <- paste0(
     "Driver={ODBC Driver 13 for SQL Server};", 
     "Server=%s,%s;", 

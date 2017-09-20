@@ -89,7 +89,7 @@ update_stock_price <- function(con, ticker, wait = 0.1){
 #' 
 #' @export
 get_stock_price <- function(con, ticker){
-  cols <- "Date, Volume, Adjusted, Ticker, LogReturn"
+  cols <- "Ticker, Date, Volume, Adjusted, LogReturn"
   qry <- sprintf("SELECT %s FROM prices WHERE Ticker = '%s'", cols, ticker)
   rs <- dbSendQuery(con, qry)
   z <- dbFetch(rs)
@@ -102,5 +102,10 @@ get_stock_price <- function(con, ticker){
 #' @inherit update_ftse_components
 #' @export
 get_all_stock_prices <- function(con){
-  dbReadTable(con, "prices") %>% as.tibble()
+  cols <- "Ticker, Date, Volume, Adjusted, LogReturn"
+  qry <- sprintf("SELECT %s FROM prices", cols)
+  rs <- dbSendQuery(con, qry)
+  z <- dbFetch(rs)
+  dbClearResult(rs)
+  z
 }

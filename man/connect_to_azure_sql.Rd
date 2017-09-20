@@ -4,16 +4,16 @@
 \alias{connect_to_azure_sql}
 \title{Connect to Azure SQL database.}
 \usage{
-connect_to_azure_sql(db, port = 1433, id, pw)
+connect_to_azure_sql(db, id, pw, port = 1433)
 }
 \arguments{
 \item{db}{database server name, e.g. \code{tcp:adv-stock-price.database.windows.net}}
 
-\item{port}{port number}
-
 \item{id}{user name}
 
 \item{pw}{password}
+
+\item{port}{port number}
 }
 \value{
 database connection string
